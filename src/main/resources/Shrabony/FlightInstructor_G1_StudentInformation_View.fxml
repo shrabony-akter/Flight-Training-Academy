@@ -7,20 +7,19 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="Shrabony.FlightInstructor_G1_StudentInformation_ViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.FlightInstructor_G1_StudentInformation_ViewController">
    <children>
       <Label layoutX="245.0" prefHeight="50.0" prefWidth="110.0" text="Student Information" />
-      <ComboBox layoutX="64.0" layoutY="64.0" prefWidth="150.0" promptText="Training Status" />
-      <Button layoutX="300.0" layoutY="64.0" mnemonicParsing="false" text="Search" />
-      <Button layoutX="242.0" layoutY="331.0" mnemonicParsing="false" text="Back to Dashboard" />
-      <TableView layoutX="14.0" layoutY="112.0" prefHeight="200.0" prefWidth="574.0">
+      <ComboBox fx:id="trainingStatusComboBox" layoutX="64.0" layoutY="64.0" prefWidth="150.0" promptText="Training Status" />
+      <Button layoutX="300.0" layoutY="64.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
+      <Button layoutX="242.0" layoutY="331.0" mnemonicParsing="false" onAction="#backToDashboardButton" text="Back to Dashboard" />
+      <TableView fx:id="studentInformationTableView" layoutX="14.0" layoutY="112.0" prefHeight="200.0" prefWidth="574.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Student ID" />
-          <TableColumn prefWidth="114.39996337890625" text="Student Name" />
-            <TableColumn prefWidth="116.00006103515625" text="Enrolled Course" />
-            <TableColumn prefWidth="128.800048828125" text="Contact Number" />
-            <TableColumn prefWidth="143.199951171875" text="Training Status" />
+          <TableColumn fx:id="studentidTableColoum" prefWidth="75.0" text="Student ID" />
+          <TableColumn fx:id="studentNameTableColoum" prefWidth="114.39996337890625" text="Student Name" />
+            <TableColumn fx:id="enrollrdCourseTableColoum" prefWidth="116.00006103515625" text="Enrolled Course" />
+            <TableColumn fx:id="contactNumberTableColoum" prefWidth="128.800048828125" text="Contact Number" />
+            <TableColumn fx:id="trainingStatusTablecoloum" prefWidth="143.199951171875" text="Training Status" />
         </columns>
       </TableView>
    </children>

@@ -7,14 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="Shrabony.FlightInstructor_G3_RecordAssessmentMarksController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.FlightInstructor_G3_RecordAssessmentMarksController">
    <children>
       <Label layoutX="248.0" layoutY="14.0" prefHeight="54.0" prefWidth="104.0" text="Assessment Marks" />
-      <ComboBox layoutX="207.0" layoutY="107.0" prefWidth="150.0" promptText="Student ID" />
-      <Button layoutX="207.0" layoutY="224.0" mnemonicParsing="false" text="Save Marks" />
-      <Button layoutX="207.0" layoutY="276.0" mnemonicParsing="false" text="Back to Dashboard" />
-      <TextField layoutX="207.0" layoutY="159.0" />
+      <ComboBox fx:id="studentIdComboBox" layoutX="207.0" layoutY="107.0" prefWidth="150.0" promptText="Student ID" />
+      <Button layoutX="207.0" layoutY="224.0" mnemonicParsing="false" onAction="#saveMarksButton" text="Save Marks" />
+      <Button layoutX="207.0" layoutY="276.0" mnemonicParsing="false" onAction="#backToDashboardButton" text="Back to Dashboard" />
+      <TextField fx:id="assessmentMarksTextField" layoutX="207.0" layoutY="159.0" />
       <Text layoutX="93.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assessment Marks" />
    </children>
 </AnchorPane>

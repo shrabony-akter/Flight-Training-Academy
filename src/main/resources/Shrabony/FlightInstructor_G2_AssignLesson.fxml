@@ -5,13 +5,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="Shrabony.FlightInstructor_G2_AssignLessonController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.FlightInstructor_G2_AssignLessonController">
    <children>
       <Label layoutX="260.0" layoutY="2.0" prefHeight="54.0" prefWidth="79.0" text="Assign Lessons" />
-      <ComboBox layoutX="197.0" layoutY="97.0" prefWidth="150.0" promptText="Student ID" />
-      <ComboBox layoutX="197.0" layoutY="152.0" prefWidth="150.0" promptText="Lesson" />
-      <Button layoutX="197.0" layoutY="214.0" mnemonicParsing="false" text="Assign Lesson" />
-      <Button layoutX="197.0" layoutY="266.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <ComboBox fx:id="studentIdComboBox" layoutX="197.0" layoutY="97.0" prefWidth="150.0" promptText="Student ID" />
+      <ComboBox fx:id="lessonComboBox" layoutX="197.0" layoutY="152.0" prefWidth="150.0" promptText="Lesson" />
+      <Button layoutX="197.0" layoutY="214.0" mnemonicParsing="false" onAction="#assignlessonButton" text="Assign Lesson" />
+      <Button layoutX="197.0" layoutY="266.0" mnemonicParsing="false" onAction="#backToDashBoardButton" text="Back to Dashboard" />
    </children>
 </AnchorPane>

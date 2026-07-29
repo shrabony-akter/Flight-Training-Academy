@@ -7,14 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="Shrabony.FlightInstructor_G7_CreateAnnouncementController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.FlightInstructor_G7_CreateAnnouncementController">
    <children>
       <Label layoutX="250.0" layoutY="33.0" prefHeight="54.0" prefWidth="123.0" text="Create Announcement" />
-      <Button layoutX="237.0" layoutY="284.0" mnemonicParsing="false" text="Publish" />
-      <Button layoutX="237.0" layoutY="332.0" mnemonicParsing="false" text="Back to Dashboard" />
-      <TextField layoutX="237.0" layoutY="108.0" />
+      <Button layoutX="237.0" layoutY="284.0" mnemonicParsing="false" onAction="#publishButton" text="Publish" />
+      <Button layoutX="237.0" layoutY="332.0" mnemonicParsing="false" onAction="#backToDashboardbutton" text="Back to Dashboard" />
+      <TextField fx:id="announcementTitleTextfield" layoutX="237.0" layoutY="108.0" />
       <Text layoutX="106.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement Title" />
-      <TextArea layoutX="55.0" layoutY="167.0" prefHeight="85.0" prefWidth="490.0" text="Announcement Details&#10;" />
+      <TextArea fx:id="announcementDetailsTextArea" layoutX="55.0" layoutY="167.0" prefHeight="85.0" prefWidth="490.0" text="Announcement Details&#10;" />
    </children>
 </AnchorPane>

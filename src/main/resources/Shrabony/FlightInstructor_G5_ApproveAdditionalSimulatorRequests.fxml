@@ -6,21 +6,20 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="Shrabony.FlightInstructor_G5_ApproveAdditionalSimulatorRequestsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.FlightInstructor_G5_ApproveAdditionalSimulatorRequestsController">
    <children>
       <Label layoutX="220.0" layoutY="14.0" prefHeight="44.0" prefWidth="160.0" text="Additional Simulator Requests" />
-      <TableView layoutX="31.0" layoutY="75.0" prefHeight="200.0" prefWidth="550.0">
+      <TableView fx:id="additionalSimulatorRequestsTableView" layoutX="31.0" layoutY="75.0" prefHeight="200.0" prefWidth="550.0">
         <columns>
-          <TableColumn prefWidth="68.00006103515625" text="Request ID" />
-          <TableColumn prefWidth="68.0" text="Student ID" />
-            <TableColumn prefWidth="88.800048828125" text="Student Name" />
-            <TableColumn prefWidth="104.0" text="Requested Date" />
-            <TableColumn prefWidth="118.4000244140625" text="Preferred Time Slot" />
-            <TableColumn prefWidth="105.59991455078125" text="Request Reason" />
+          <TableColumn fx:id="requestIdTableColoum" prefWidth="68.00006103515625" text="Request ID" />
+          <TableColumn fx:id="studentIdTableColoum" prefWidth="68.0" text="Student ID" />
+            <TableColumn fx:id="studentNameTableColoum" prefWidth="88.800048828125" text="Student Name" />
+            <TableColumn fx:id="requestedDateTAblecoloum" prefWidth="104.0" text="Requested Date" />
+            <TableColumn fx:id="preferredTimeSlotTableColoum" prefWidth="118.4000244140625" text="Preferred Time Slot" />
+            <TableColumn fx:id="requestReasonTableColoum" prefWidth="105.59991455078125" text="Request Reason" />
         </columns>
       </TableView>
-      <Button layoutX="130.0" layoutY="315.0" mnemonicParsing="false" text="Approve Request" />
-      <Button layoutX="322.0" layoutY="315.0" mnemonicParsing="false" text="Back to dashboard" />
+      <Button layoutX="130.0" layoutY="315.0" mnemonicParsing="false" onAction="#approveRequestButton" text="Approve Request" />
+      <Button layoutX="322.0" layoutY="315.0" mnemonicParsing="false" onAction="#backToDashboardButton" text="Back to dashboard" />
    </children>
 </AnchorPane>
