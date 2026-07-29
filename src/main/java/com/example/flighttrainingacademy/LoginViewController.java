@@ -4,12 +4,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class LoginViewController
 {
+    @javafx.fxml.FXML
+    private PasswordField passwordPasswordField;
+    @javafx.fxml.FXML
+    private ComboBox userNameComboBox;
+
     @javafx.fxml.FXML
     public void initialize() {
     }
