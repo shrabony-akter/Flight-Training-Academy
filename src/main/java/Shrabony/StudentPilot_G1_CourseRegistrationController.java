@@ -1,5 +1,9 @@
 package Shrabony;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+
 public class StudentPilot_G1_CourseRegistrationController
 {
     @javafx.fxml.FXML

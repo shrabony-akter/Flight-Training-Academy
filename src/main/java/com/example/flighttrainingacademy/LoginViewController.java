@@ -16,7 +16,8 @@ public class LoginViewController
 
     @javafx.fxml.FXML
     public void logInButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Shrabony_Akter/Student_Pilot/StudentPilot_Dashboard.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Shrabony/FlightInstructor_Dashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage nextStage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         nextStage.setTitle("Student pilot Dashboard");
