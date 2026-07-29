@@ -9,17 +9,17 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.StudentPilot_G5_ViewFeedback_ViewController">
    <children>
-      <Button layoutX="46.0" layoutY="333.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <Button layoutX="46.0" layoutY="333.0" mnemonicParsing="false" onAction="#backToDashboardButton" text="Back to Dashboard" />
       <Label layoutX="268.0" layoutY="14.0" prefHeight="49.0" prefWidth="80.0" text="View Feedback" />
-      <TableView layoutX="46.0" layoutY="64.0" prefHeight="200.0" prefWidth="522.0">
+      <TableView fx:id="viewfeedbackTableView" layoutX="46.0" layoutY="64.0" prefHeight="200.0" prefWidth="522.0">
          <columns>
-            <TableColumn prefWidth="114.39996337890625" text="Feedback ID" />
-            <TableColumn prefWidth="122.4000244140625" text="Instructor Name" />
-            <TableColumn prefWidth="128.800048828125" text="Feedback Date" />
-            <TableColumn prefWidth="157.5999755859375" text="Feedback Summary" />
+            <TableColumn fx:id="feedbackIdTableColumn" prefWidth="114.39996337890625" text="Feedback ID" />
+            <TableColumn fx:id="instructorNameTableColumn" prefWidth="122.4000244140625" text="Instructor Name" />
+            <TableColumn fx:id="feedbackDateTableColoumn" prefWidth="128.800048828125" text="Feedback Date" />
+            <TableColumn fx:id="feedbackSummaryTableColumn" prefWidth="157.5999755859375" text="Feedback Summary" />
          </columns>
       </TableView>
-      <Button layoutX="46.0" layoutY="283.0" mnemonicParsing="false" text="View" />
-      <TextArea layoutX="200.0" layoutY="283.0" prefHeight="76.0" prefWidth="366.0" text="Feedback Area&#10;" />
+      <Button layoutX="46.0" layoutY="283.0" mnemonicParsing="false" onAction="#viewButton" text="View" />
+      <TextArea fx:id="feedbackAreaTextArea" layoutX="200.0" layoutY="283.0" prefHeight="76.0" prefWidth="366.0" text="Feedback Area&#10;" />
    </children>
 </AnchorPane>

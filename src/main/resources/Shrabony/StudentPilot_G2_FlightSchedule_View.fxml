@@ -7,22 +7,21 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="Shrabony.StudentPilot_G2_FlightSchedule_ViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.StudentPilot_G2_FlightSchedule_ViewController">
    <children>
       <Label layoutX="259.0" layoutY="24.0" prefHeight="42.0" prefWidth="82.0" text="Flight Schedule" />
-      <ComboBox layoutX="32.0" layoutY="77.0" prefWidth="150.0" promptText="Aircraft Type" />
-      <TableView layoutX="32.0" layoutY="118.0" prefHeight="200.0" prefWidth="548.0">
+      <ComboBox fx:id="airCraftTypeComboBox" layoutX="32.0" layoutY="77.0" prefWidth="150.0" promptText="Aircraft Type" />
+      <TableView fx:id="flightScheduleTableView" layoutX="32.0" layoutY="118.0" prefHeight="200.0" prefWidth="548.0">
         <columns>
-          <TableColumn prefWidth="101.60003662109375" text="Flight ID" />
-          <TableColumn prefWidth="95.199951171875" text="Flight Date" />
-            <TableColumn prefWidth="109.60003662109375" text="Flight Time" />
-            <TableColumn prefWidth="118.40008544921875" text="Aircraft Type" />
-            <TableColumn prefWidth="123.20001220703125" text="Instructor Name" />
+          <TableColumn fx:id="flightIdTableColumn" prefWidth="101.60003662109375" text="Flight ID" />
+          <TableColumn fx:id="flightDateTableColumn" prefWidth="95.199951171875" text="Flight Date" />
+            <TableColumn fx:id="flightTimeTableColumn" prefWidth="109.60003662109375" text="Flight Time" />
+            <TableColumn fx:id="aircraftTypeTableColumn" prefWidth="118.40008544921875" text="Aircraft Type" />
+            <TableColumn fx:id="instructorNameTableColumn" prefWidth="123.20001220703125" text="Instructor Name" />
         </columns>
       </TableView>
-      <Button layoutX="390.0" layoutY="77.0" mnemonicParsing="false" text="Refresh Filter" />
-      <Button layoutX="242.0" layoutY="337.0" mnemonicParsing="false" text="Back to dashboard" />
-      <Button layoutX="233.0" layoutY="77.0" mnemonicParsing="false" text="Search Filter" />
+      <Button layoutX="390.0" layoutY="77.0" mnemonicParsing="false" onAction="#refreshfilterButton" text="Refresh Filter" />
+      <Button layoutX="242.0" layoutY="337.0" mnemonicParsing="false" onAction="#backToDashboardButton" text="Back to dashboard" />
+      <Button layoutX="233.0" layoutY="77.0" mnemonicParsing="false" onAction="#searchfilterButton" text="Search Filter" />
    </children>
 </AnchorPane>
