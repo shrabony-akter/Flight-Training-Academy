@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class FlightInstructor_DashboardController
 {
+
     @javafx.fxml.FXML
     private BorderPane flightInstructorDashboardBorderpane;
 

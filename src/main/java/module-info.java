@@ -2,6 +2,7 @@ module com.example.flighttrainingacademy {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
+    requires com.example.flighttrainingacademy;
 
 
     opens com.example.flighttrainingacademy to javafx.fxml;

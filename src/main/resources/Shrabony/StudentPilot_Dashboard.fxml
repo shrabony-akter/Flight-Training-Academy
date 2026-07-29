@@ -1,31 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.StudentPilot_DashboardController">
+<BorderPane fx:id="studentPilotDashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.StudentPilot_DashboardController">
    <top>
-      <Label prefHeight="72.0" prefWidth="172.0" text="      Student Pilot Dashboard" BorderPane.alignment="CENTER" />
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Open File" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
    </top>
    <left>
-      <VBox prefHeight="349.0" prefWidth="171.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="508.0" prefWidth="175.0" style="-fx-background-color: ass;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Course Registration" />
-            <Button mnemonicParsing="false" text="Flight Schedule" />
-            <Button mnemonicParsing="false" text="Simulator Booking" />
-            <Button mnemonicParsing="false" text="Training Progress" />
-            <Button mnemonicParsing="false" text="View Feedback" />
-            <Button mnemonicParsing="false" text="Update Profile" />
-            <Button mnemonicParsing="false" text="Leave Request" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="171.0" text="Additional Simulator Request" />
-            <Button mnemonicParsing="false" text="Sign Out" />
+            <Button mnemonicParsing="false" onAction="#courseRegistrationButton" prefHeight="26.0" prefWidth="178.0" text="Course Registration" />
+            <Button mnemonicParsing="false" onAction="#flightScheduleButton" prefHeight="26.0" prefWidth="176.0" text="Flight Schedule" />
+            <Button mnemonicParsing="false" onAction="#simulatorBookingButton" prefHeight="26.0" prefWidth="175.0" text="Simulator Booking" />
+            <Button mnemonicParsing="false" onAction="#trainingProgressButton" prefHeight="26.0" prefWidth="174.0" text="Training Progress" />
+            <Button mnemonicParsing="false" onAction="#viewFeedbackButton" prefHeight="26.0" prefWidth="176.0" text="View Feedback" />
+            <Button mnemonicParsing="false" onAction="#updateProfileButton" prefHeight="26.0" prefWidth="176.0" text="Update Profile" />
+            <Button mnemonicParsing="false" onAction="#leaveRequestButton" prefHeight="26.0" prefWidth="176.0" text="Leave Request" />
+            <Button mnemonicParsing="false" onAction="#additionalSimulatorRequestButton" prefHeight="26.0" prefWidth="176.0" text="Additional Simulator Request" />
+            <Button mnemonicParsing="false" onAction="#signOutButton" prefHeight="26.0" prefWidth="176.0" text="Sign Out" />
          </children>
       </VBox>
    </left>
    <center>
-      <AnchorPane prefHeight="469.0" prefWidth="769.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="402.0" prefWidth="491.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
