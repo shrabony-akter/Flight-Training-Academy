@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.example.flighttrainingacademy.Shrabony_Akter.Student_Pilot.G8_Student_AdditionalSimulatorRequestController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="Shrabony.StudentPilot_G8_AdditionalSimulatorRequestController">
    <children>
       <Label layoutX="230.0" layoutY="14.0" prefHeight="56.0" prefWidth="160.0" text="Additional Simulator Request" />
       <Label layoutX="107.0" layoutY="96.0" text="Preferred Date" />
