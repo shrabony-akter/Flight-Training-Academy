@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Mahin.GroundInstructor_G4_ConductGroundTheoryAssessmentController">
+
+    <children>
+
+        <VBox spacing="15"
+              alignment="CENTER"
+              AnchorPane.topAnchor="20.0"
+              AnchorPane.bottomAnchor="20.0"
+              AnchorPane.leftAnchor="20.0"
+              AnchorPane.rightAnchor="20.0">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Conduct Ground Theory Assessment"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+            <TextField fx:id="assessmentTitleField"
+                       promptText="Assessment Title"/>
+
+            <TextField fx:id="studentIdField"
+                       promptText="Student ID"/>
+
+            <TextField fx:id="marksField"
+                       promptText="Marks Obtained"/>
+
+            <TextArea fx:id="feedbackArea"
+                      promptText="Feedback"
+                      prefHeight="100"/>
+
+            <Button text="Submit Assessment"
+                    fx:id="submitAssessmentButton"
+                    onAction="#submitAssessment"/>
+
+            <Button text="Back"
+                    onAction="#goBack"/>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

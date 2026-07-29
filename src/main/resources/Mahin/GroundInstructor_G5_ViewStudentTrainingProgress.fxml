@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Mahin.GroundInstructor_G5_ViewStudentTrainingProgressController">
+
+    <children>
+
+        <VBox spacing="15"
+              alignment="CENTER"
+              AnchorPane.topAnchor="20.0"
+              AnchorPane.bottomAnchor="20.0"
+              AnchorPane.leftAnchor="20.0"
+              AnchorPane.rightAnchor="20.0">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="View Student Training Progress"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+            <TextField fx:id="studentIdField"
+                       promptText="Enter Student ID"/>
+
+            <Button text="Search Student"
+                    fx:id="searchButton"
+                    onAction="#searchStudent"/>
+
+            <TableView fx:id="progressTable">
+
+                <columns>
+
+                    <TableColumn fx:id="lessonColumn"
+                                 text="Lesson"/>
+
+                    <TableColumn fx:id="statusColumn"
+                                 text="Status"/>
+
+                    <TableColumn fx:id="scoreColumn"
+                                 text="Score"/>
+
+                </columns>
+
+            </TableView>
+
+            <Button text="Back"
+                    onAction="#goBack"/>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

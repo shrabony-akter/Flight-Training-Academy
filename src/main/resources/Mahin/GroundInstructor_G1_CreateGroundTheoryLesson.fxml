@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Mahin.GroundInstructor_G1_CreateGroundTheoryLessonController">
+
+    <children>
+
+        <VBox spacing="15"
+              alignment="CENTER"
+              AnchorPane.topAnchor="20.0"
+              AnchorPane.bottomAnchor="20.0"
+              AnchorPane.leftAnchor="20.0"
+              AnchorPane.rightAnchor="20.0">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Create Ground Theory Lesson"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+            <TextField fx:id="lessonTitleField"
+                       promptText="Lesson Title"/>
+
+            <TextField fx:id="topicField"
+                       promptText="Topic"/>
+
+            <TextArea fx:id="descriptionArea"
+                      promptText="Lesson Description"
+                      prefHeight="100"/>
+
+            <DatePicker fx:id="lessonDatePicker"/>
+
+            <Button text="Create Lesson"
+                    fx:id="createLessonButton"
+                    onAction="#createLesson"/>
+
+            <Button text="Back"
+                    onAction="#goBack"/>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

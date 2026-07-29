@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Mahin.AirTrafficController_A6_GenerateAirTrafficReportController">
+
+
+    <children>
+
+        <VBox spacing="15"
+              alignment="CENTER"
+              AnchorPane.topAnchor="30.0"
+              AnchorPane.leftAnchor="30.0"
+              AnchorPane.rightAnchor="30.0">
+
+
+            <Label text="Generate Air Traffic Report"
+                   style="-fx-font-size:22px; -fx-font-weight:bold;"/>
+
+
+            <TextField fx:id="reportTitleField"
+                       promptText="Report Title"/>
+
+
+            <TextArea fx:id="reportDetailsArea"
+                      promptText="Report Details"
+                      prefHeight="150"/>
+
+
+            <Button text="Generate Report"
+                    onAction="#generateReport"/>
+
+
+            <Button text="Back"
+                    onAction="#goBack"/>
+
+
+        </VBox>
+
+    </children>
+
+
+</AnchorPane>
