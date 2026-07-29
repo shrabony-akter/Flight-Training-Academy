@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="622.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.IssueCertificateController">
+   <children>
+      <TextField fx:id="Cert_No" layoutX="140.0" layoutY="46.0" />
+      <TextField fx:id="Student" layoutX="140.0" layoutY="83.0" />
+      <TextField fx:id="Program" layoutX="140.0" layoutY="121.0" />
+      <DatePicker fx:id="Date" layoutX="543.0" layoutY="46.0" />
+      <ComboBox fx:id="Status" layoutX="555.0" layoutY="83.0" prefWidth="150.0" />
+      <Label layoutX="82.0" layoutY="50.0" text="Cert_No" />
+      <Label layoutX="82.0" layoutY="87.0" text="Student" />
+      <Label layoutX="80.0" layoutY="125.0" text="Program" />
+      <Label layoutX="489.0" layoutY="50.0" text="Date" />
+      <Label layoutX="489.0" layoutY="87.0" text="Status" />
+      <TableView fx:id="Table" layoutX="128.0" layoutY="305.0" prefHeight="200.0" prefWidth="638.0">
+        <columns>
+          <TableColumn fx:id="CertNoCol" prefWidth="139.1999969482422" text="CertNoCol" />
+          <TableColumn fx:id="StudentCol" prefWidth="115.20001220703125" text="StudentCol" />
+            <TableColumn fx:id="ProgramCol" prefWidth="115.20001220703125" text="ProgramCol" />
+            <TableColumn fx:id="DateCol" prefWidth="115.199951171875" text="DateCol" />
+            <TableColumn fx:id="StatusCol" prefWidth="147.19989013671875" text="StatusCol" />
+        </columns>
+      </TableView>
+      <Button layoutX="313.0" layoutY="215.0" mnemonicParsing="false" onAction="#Proceed" text="Proceed" />
+   </children>
+</AnchorPane>

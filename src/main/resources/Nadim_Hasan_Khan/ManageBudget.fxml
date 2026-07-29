@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="645.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ManageBudgetController">
+   <children>
+      <ComboBox fx:id="Department" layoutX="107.0" layoutY="80.0" prefWidth="150.0" />
+      <TextField fx:id="Allocated" layoutX="108.0" layoutY="151.0" />
+      <TextField fx:id="Spent" layoutX="527.0" layoutY="80.0" />
+      <TextField fx:id="Remaining" layoutX="528.0" layoutY="151.0" />
+      <Label layoutX="42.0" layoutY="84.0" text="Department" />
+      <Label layoutX="42.0" layoutY="155.0" text="Allocated" />
+      <Label layoutX="468.0" layoutY="84.0" text="Spent" />
+      <Label layoutX="468.0" layoutY="155.0" text="Remaining" />
+      <Button layoutX="294.0" layoutY="234.0" mnemonicParsing="false" onAction="#Add_To_Table" text="Add_To_Table" />
+      <TableView layoutX="139.0" layoutY="303.0" prefHeight="200.0" prefWidth="501.0">
+        <columns>
+          <TableColumn fx:id="DepartmentCol" prefWidth="105.60003662109375" text="DepartmentCol" />
+          <TableColumn fx:id="AllocatedCol" prefWidth="119.199951171875" text="AllocatedCol" />
+            <TableColumn fx:id="SpentCol" prefWidth="136.0" text="SpentCol" />
+            <TableColumn fx:id="RemainingCol" prefWidth="140.7999267578125" text="RemainingCol" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

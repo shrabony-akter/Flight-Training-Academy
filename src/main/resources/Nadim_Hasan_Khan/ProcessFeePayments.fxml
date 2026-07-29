@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="562.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ProcessFeePaymentsController">
+   <children>
+      <TextField fx:id="Payment_Id" layoutX="99.0" layoutY="45.0" />
+      <TextField fx:id="Student" layoutX="98.0" layoutY="87.0" />
+      <TextField fx:id="Course" layoutX="99.0" layoutY="130.0" />
+      <TextField fx:id="Amount" layoutX="502.0" layoutY="45.0" />
+      <Label layoutX="27.0" layoutY="49.0" text="Payment_Id" />
+      <Label layoutX="44.0" layoutY="91.0" text="Student" />
+      <Label layoutX="44.0" layoutY="134.0" text="Course" />
+      <Label layoutX="442.0" layoutY="49.0" text="Amount" />
+      <Label layoutX="442.0" layoutY="125.0" text="Status" />
+      <Label layoutX="442.0" layoutY="90.0" text="Date" />
+      <DatePicker fx:id="Date" layoutX="491.0" layoutY="87.0" />
+      <Button layoutX="248.0" layoutY="203.0" mnemonicParsing="false" onAction="#AddToReport" text="AddToReport" />
+      <Label layoutX="295.0" layoutY="272.0" prefHeight="26.0" prefWidth="98.0" text="Payment  Report" />
+      <TableView fx:id="Table" layoutX="58.0" layoutY="323.0" prefHeight="200.0" prefWidth="681.0">
+        <columns>
+          <TableColumn fx:id="PaymentIdCol" prefWidth="105.59997940063477" text="PaymentIdCol" />
+          <TableColumn fx:id="StudentCol" prefWidth="111.19999694824219" text="StudentCol" />
+            <TableColumn fx:id="CourseCol" prefWidth="101.60003662109375" text="CourseCol" />
+            <TableColumn fx:id="AmountCol" prefWidth="110.4000244140625" text="AmountCol" />
+            <TableColumn fx:id="DateCol" prefWidth="127.2000732421875" text="DateCol" />
+            <TableColumn fx:id="StatusCol" prefWidth="125.5999755859375" text="StatusCol" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="Status" layoutX="491.0" layoutY="121.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

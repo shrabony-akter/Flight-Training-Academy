@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="628.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ManageOutstandingDuesController">
+   <children>
+      <TextField fx:id="Student_Id" layoutX="115.0" layoutY="35.0" />
+      <TextField fx:id="Name" layoutX="114.0" layoutY="72.0" />
+      <TextField fx:id="Course" layoutX="115.0" layoutY="113.0" />
+      <TextField fx:id="Total_Due" layoutX="502.0" layoutY="35.0" />
+      <DatePicker fx:id="Last_Pay" layoutX="490.0" layoutY="72.0" />
+      <ComboBox fx:id="Status" layoutX="503.0" layoutY="113.0" prefWidth="150.0" />
+      <Label layoutX="52.0" layoutY="39.0" text="Student_Id" />
+      <Label layoutX="52.0" layoutY="76.0" text="Name" />
+      <Label layoutX="52.0" layoutY="117.0" text="Course" />
+      <Label layoutX="436.0" layoutY="39.0" text="Total_Due" />
+      <Label layoutX="436.0" layoutY="76.0" text="Last_Pay" />
+      <Label layoutX="436.0" layoutY="117.0" text="Status" />
+      <TableView fx:id="Table" layoutX="114.0" layoutY="265.0" prefHeight="200.0" prefWidth="742.0">
+        <columns>
+          <TableColumn fx:id="StudentIdCol" prefWidth="117.60000610351562" text="StudentIdCol" />
+          <TableColumn fx:id="NameCol" prefWidth="109.59999084472656" text="NameCol" />
+            <TableColumn fx:id="CourseCol" prefWidth="116.0" text="CourseCol" />
+            <TableColumn fx:id="ToalDuecol" prefWidth="124.0" text="ToalDuecol" />
+            <TableColumn fx:id="LastPayCol" prefWidth="138.4000244140625" text="LastPayCol" />
+            <TableColumn fx:id="StatusCol" prefWidth="135.20001220703125" text="StatusCol" />
+        </columns>
+      </TableView>
+      <Button layoutX="301.0" layoutY="175.0" mnemonicParsing="false" onAction="#Add_To_Table" text="Add_To_Table" />
+   </children>
+</AnchorPane>
