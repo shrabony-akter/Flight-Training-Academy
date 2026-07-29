@@ -15,11 +15,15 @@ public class StudentPilot_G1_CourseRegistrationController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void courseRegistrationBackbutton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void courseregisterButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backToDashboardButton(ActionEvent actionEvent) {
     }
 }
