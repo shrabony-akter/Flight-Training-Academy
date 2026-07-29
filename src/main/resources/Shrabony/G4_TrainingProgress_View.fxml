@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.example.flighttrainingacademy.Shrabony_Akter.Student_Pilot.G4_TrainingProgress_ViewController">
+   <children>
+      <Label layoutX="254.0" layoutY="5.0" prefHeight="67.0" prefWidth="92.0" text="Training Progress" />
+      <TableView layoutX="37.0" layoutY="88.0" prefHeight="200.0" prefWidth="522.0">
+        <columns>
+          <TableColumn prefWidth="90.4000244140625" text="Lesson Name" />
+          <TableColumn prefWidth="89.5999755859375" text="Training Date" />
+            <TableColumn prefWidth="108.00006103515625" text="Instructor Name" />
+            <TableColumn prefWidth="88.79998779296875" text="Marks" />
+            <TableColumn prefWidth="146.39996337890625" text="Completion Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="119.0" layoutY="312.0" mnemonicParsing="false" text="Refresh" />
+      <Button layoutX="320.0" layoutY="312.0" mnemonicParsing="false" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

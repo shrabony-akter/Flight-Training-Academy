@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.example.flighttrainingacademy.Shrabony_Akter.Student_Pilot.G8_Student_AdditionalSimulatorRequestController">
+   <children>
+      <Label layoutX="230.0" layoutY="14.0" prefHeight="56.0" prefWidth="160.0" text="Additional Simulator Request" />
+      <Label layoutX="107.0" layoutY="96.0" text="Preferred Date" />
+      <Label layoutX="91.0" layoutY="148.0" text="Preferred Time Slot" />
+      <TextField layoutX="207.0" layoutY="144.0" />
+      <Button layoutX="209.0" layoutY="245.0" mnemonicParsing="false" text="Submit Request" />
+      <Button layoutX="212.0" layoutY="292.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <DatePicker layoutX="207.0" layoutY="92.0" />
+      <Label layoutX="142.0" layoutY="204.0" text="Reason" />
+      <TextField layoutX="207.0" layoutY="200.0" />
+   </children>
+</AnchorPane>

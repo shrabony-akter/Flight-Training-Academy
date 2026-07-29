@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flighttrainingacademy.Shrabony_Akter.Student_Pilot.G7_Student_LeaveRequestController">
+   <children>
+      <Label layoutX="272.0" layoutY="14.0" prefHeight="56.0" prefWidth="81.0" text="Leave Request" />
+      <Label layoutX="153.0" layoutY="115.0" text="Leave Date" />
+      <Label layoutX="142.0" layoutY="160.0" text="Leave Reason" />
+      <Button layoutX="239.0" layoutY="227.0" mnemonicParsing="false" text="Submit Request" />
+      <Button layoutX="242.0" layoutY="267.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <DatePicker layoutX="239.0" layoutY="111.0" />
+      <TextArea layoutX="239.0" layoutY="150.0" prefHeight="56.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

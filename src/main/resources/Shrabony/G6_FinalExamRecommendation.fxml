@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.example.flighttrainingacademy.Shrabony_Akter.Flight_Instructor.G6_FinalExamRecommendationController">
+   <children>
+      <Label layoutX="220.0" layoutY="24.0" prefHeight="54.0" prefWidth="159.0" text="Final Exam Recommendation" />
+      <ComboBox layoutX="227.0" layoutY="127.0" prefWidth="150.0" promptText="Student ID" />
+      <Button layoutX="227.0" layoutY="274.0" mnemonicParsing="false" text="Submit Recommendation" />
+      <Button layoutX="227.0" layoutY="322.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <TextField layoutX="227.0" layoutY="218.0" />
+      <Text layoutX="96.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendation Note" />
+      <ComboBox layoutX="225.0" layoutY="167.0" prefHeight="26.0" prefWidth="177.0" promptText="Recommendation Status" />
+   </children>
+</AnchorPane>
