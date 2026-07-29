@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flighttrainingacademy.Shrabony_Akter.Student_Pilot.G0_StudentPilot_DashboardController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shrabony.StudentPilot_DashboardController">
    <top>
       <Label prefHeight="72.0" prefWidth="172.0" text="      Student Pilot Dashboard" BorderPane.alignment="CENTER" />
    </top>
