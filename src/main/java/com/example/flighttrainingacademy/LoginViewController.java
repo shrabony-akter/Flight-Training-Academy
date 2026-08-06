@@ -40,6 +40,9 @@ public class LoginViewController
         Stage nextStage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         //nextStage.setTitle("Student pilot Dashboard");
         nextStage.setScene(scene);
+
+
+
         nextStage.show();
     }
 }
