@@ -8,8 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="637.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ApproveStudentPaymentRequestCnt">
+<AnchorPane fx:id="mainpane" prefHeight="637.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ApproveStudentPaymentRequestCnt">
    <children>
       <TextField fx:id="Request_Id" layoutX="115.0" layoutY="97.0" />
       <TextField fx:id="Student" layoutX="116.0" layoutY="139.0" />
@@ -21,8 +20,8 @@
       <Label layoutX="460.0" layoutY="101.0" text="Amount" />
       <Label layoutX="460.0" layoutY="143.0" text="Date" />
       <DatePicker fx:id="Date" layoutX="511.0" layoutY="139.0" />
-      <Button layoutX="240.0" layoutY="273.0" mnemonicParsing="false" onAction="#Add_To_Table" text="Add_To_Table" />
-      <TableView layoutX="116.0" layoutY="343.0" prefHeight="200.0" prefWidth="603.0">
+      <Button layoutX="503.0" layoutY="268.0" mnemonicParsing="false" onAction="#Add_To_Table" text="Add_To_Table" />
+      <TableView fx:id="Table" layoutX="116.0" layoutY="343.0" prefHeight="200.0" prefWidth="603.0">
         <columns>
           <TableColumn fx:id="RequestIdCol" prefWidth="121.60003662109375" text="RequestIdCol" />
           <TableColumn fx:id="StudentCol" prefWidth="105.59996032714844" text="StudentCol" />
@@ -31,5 +30,7 @@
             <TableColumn fx:id="DateCol" prefWidth="131.2000732421875" text="DateCol" />
         </columns>
       </TableView>
+      <Button layoutX="375.0" layoutY="573.0" mnemonicParsing="false" onAction="#Go_Back" text="Go_Back" />
+      <Button layoutX="197.0" layoutY="268.0" mnemonicParsing="false" onAction="#SaveInfo" text="SaveInfo" />
    </children>
 </AnchorPane>

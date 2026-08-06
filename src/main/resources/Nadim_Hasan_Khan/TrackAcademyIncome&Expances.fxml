@@ -9,8 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="616.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.TrackAcademyIncomeExpancesController">
+<AnchorPane fx:id="mainpane" prefHeight="616.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.TrackAcademyIncomeExpancesController">
    <children>
       <DatePicker fx:id="Date" layoutX="112.0" layoutY="89.0" />
       <ComboBox fx:id="Type" layoutX="112.0" layoutY="135.0" prefWidth="150.0" />
@@ -32,5 +31,6 @@
         </columns>
       </TableView>
       <Button layoutX="261.0" layoutY="233.0" mnemonicParsing="false" onAction="#Add_To_Table" prefHeight="26.0" prefWidth="175.0" text="Add_To_Table" />
+      <Button layoutX="552.0" layoutY="234.0" mnemonicParsing="false" onAction="#Go_Back" text="Go_Back" />
    </children>
 </AnchorPane>

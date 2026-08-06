@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="607.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.StudentAssesmentRecordCotroller">
+<AnchorPane fx:id="mainpane" prefHeight="607.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.StudentAssesmentRecordCotroller">
    <children>
       <DatePicker fx:id="Date" layoutX="91.0" layoutY="48.0" />
       <TextField fx:id="Course" layoutX="91.0" layoutY="91.0" />
@@ -35,5 +35,7 @@
         </columns>
       </TableView>
       <Button layoutX="228.0" layoutY="209.0" mnemonicParsing="false" onAction="#Proceed_Record" text="Proceed_Record" />
+      <Button layoutX="544.0" layoutY="209.0" mnemonicParsing="false" onAction="#Go_Back" text="Go_Back" />
+      <Button layoutX="400.0" layoutY="209.0" mnemonicParsing="false" onAction="#ShowOnTable" text="ShowOnTable" />
    </children>
 </AnchorPane>

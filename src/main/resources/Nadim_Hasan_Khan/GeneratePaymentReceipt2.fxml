@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -12,8 +16,19 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="215.0" layoutY="115.0" prefHeight="30.0" prefWidth="198.0" text="Address : 123 Main Street , Dhaka" />
-      <Label layoutX="215.0" layoutY="153.0" prefHeight="30.0" prefWidth="198.0" text="Phone : " />
-      <Button fx:id="Button1" layoutX="249.0" layoutY="193.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" text="Button1" />
+      <Button layoutX="405.0" layoutY="170.0" mnemonicParsing="false" onAction="#LoadTheTable" prefHeight="42.0" prefWidth="166.0" text="LoadTheTable" />
+      <TableView fx:id="Table" layoutX="97.0" layoutY="354.0" prefHeight="200.0" prefWidth="657.0">
+        <columns>
+          <TableColumn fx:id="ReceiptIdCol" prefWidth="132.80001068115234" text="ReceiptIdCol" />
+          <TableColumn fx:id="StudentIdCol" prefWidth="117.5999755859375" text="StudentIdCol" />
+            <TableColumn fx:id="StudentNameCol" prefWidth="114.4000244140625" text="StudentNameCol" />
+            <TableColumn fx:id="StudentLabelCol" prefWidth="148.00003051757812" text="StudentLabelCol" />
+            <TableColumn fx:id="DateCol" prefWidth="144.0" text="DateCol" />
+        </columns>
+      </TableView>
+      <TextField fx:id="StudentIdFiter" layoutX="183.0" layoutY="170.0" />
+      <Label layoutX="106.0" layoutY="174.0" text="StudentIdFiter" />
+      <ComboBox fx:id="StudentLabelFilter" layoutX="198.0" layoutY="205.0" prefWidth="150.0" />
+      <Label layoutX="93.0" layoutY="209.0" text="StudentLabelFilter" />
    </children>
 </AnchorPane>

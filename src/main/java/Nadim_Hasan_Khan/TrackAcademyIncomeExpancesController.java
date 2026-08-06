@@ -1,7 +1,10 @@
 package Nadim_Hasan_Khan;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 public class TrackAcademyIncomeExpancesController
 {
@@ -27,6 +30,8 @@ public class TrackAcademyIncomeExpancesController
     private TableColumn DateCol;
     @javafx.fxml.FXML
     private DatePicker Date;
+    @javafx.fxml.FXML
+    private AnchorPane mainpane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -34,5 +39,12 @@ public class TrackAcademyIncomeExpancesController
 
     @javafx.fxml.FXML
     public void Add_To_Table(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void Go_Back(ActionEvent actionEvent)throws Exception {
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("FinanceOfficerDashboard.fxml"));
+        Node node=fxmlLoader.load();
+        mainpane.getChildren().setAll(node);
     }
 }

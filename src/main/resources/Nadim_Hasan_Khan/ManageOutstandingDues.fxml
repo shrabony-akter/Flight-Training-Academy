@@ -9,8 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="628.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ManageOutstandingDuesController">
+<AnchorPane fx:id="mainpane" prefHeight="628.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ManageOutstandingDuesController">
    <children>
       <TextField fx:id="Student_Id" layoutX="115.0" layoutY="35.0" />
       <TextField fx:id="Name" layoutX="114.0" layoutY="72.0" />
@@ -34,6 +33,8 @@
             <TableColumn fx:id="StatusCol" prefWidth="135.20001220703125" text="StatusCol" />
         </columns>
       </TableView>
-      <Button layoutX="301.0" layoutY="175.0" mnemonicParsing="false" onAction="#Add_To_Table" text="Add_To_Table" />
+      <Button layoutX="440.0" layoutY="175.0" mnemonicParsing="false" onAction="#Add_To_Table" text="Add_To_Table" />
+      <Button layoutX="288.0" layoutY="504.0" mnemonicParsing="false" onAction="#Go_Back" text="Go_Back" />
+      <Button layoutX="212.0" layoutY="175.0" mnemonicParsing="false" onAction="#Save" text="Save" />
    </children>
 </AnchorPane>

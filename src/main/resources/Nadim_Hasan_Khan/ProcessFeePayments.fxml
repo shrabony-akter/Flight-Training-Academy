@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="562.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ProcessFeePaymentsController">
+<AnchorPane fx:id="mainpane" prefHeight="562.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ProcessFeePaymentsController">
    <children>
       <TextField fx:id="Payment_Id" layoutX="99.0" layoutY="45.0" />
       <TextField fx:id="Student" layoutX="98.0" layoutY="87.0" />
@@ -22,7 +22,7 @@
       <Label layoutX="442.0" layoutY="125.0" text="Status" />
       <Label layoutX="442.0" layoutY="90.0" text="Date" />
       <DatePicker fx:id="Date" layoutX="491.0" layoutY="87.0" />
-      <Button layoutX="248.0" layoutY="203.0" mnemonicParsing="false" onAction="#AddToReport" text="AddToReport" />
+      <Button layoutX="367.0" layoutY="203.0" mnemonicParsing="false" onAction="#AddToReport" text="AddToReport" />
       <Label layoutX="295.0" layoutY="272.0" prefHeight="26.0" prefWidth="98.0" text="Payment  Report" />
       <TableView fx:id="Table" layoutX="58.0" layoutY="323.0" prefHeight="200.0" prefWidth="681.0">
         <columns>
@@ -35,5 +35,7 @@
         </columns>
       </TableView>
       <ComboBox fx:id="Status" layoutX="491.0" layoutY="121.0" prefWidth="150.0" />
+      <Button layoutX="502.0" layoutY="203.0" mnemonicParsing="false" onAction="#Go_Back" text="Go_Back" />
+      <Button layoutX="261.0" layoutY="203.0" mnemonicParsing="false" onAction="#Save" text="Save" />
    </children>
 </AnchorPane>

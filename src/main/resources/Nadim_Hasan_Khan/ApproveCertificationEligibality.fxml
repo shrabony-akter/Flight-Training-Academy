@@ -8,8 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="641.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ApproveCertificationEligibalityController">
+<AnchorPane fx:id="mainpane" prefHeight="641.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Nadim_Hasan_Khan.ApproveCertificationEligibalityController">
    <children>
       <TextField fx:id="Student_Id" layoutX="144.0" layoutY="37.0" />
       <TextField fx:id="Name" layoutX="145.0" layoutY="86.0" />
@@ -39,6 +38,8 @@
             <TableColumn fx:id="ActionCol" prefWidth="92.0" text="ActionCol" />
         </columns>
       </TableView>
-      <Button layoutX="250.0" layoutY="513.0" mnemonicParsing="false" onAction="#Proceed_Report" text="Proceed_Report" />
+      <Button layoutX="488.0" layoutY="513.0" mnemonicParsing="false" onAction="#Proceed_Report" text="ShowOnTable" />
+      <Button layoutX="646.0" layoutY="513.0" mnemonicParsing="false" onAction="#Go_Back" text="Go_Back" />
+      <Button layoutX="354.0" layoutY="216.0" mnemonicParsing="false" onAction="#SaveInfo" text="SaveInfo" />
    </children>
 </AnchorPane>
