@@ -1,8 +1,9 @@
 package Nadim_Hasan_Khan;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class GeneratePaymentReceiptM1 {
+public class GeneratePaymentReceiptM1 implements Serializable {
     private int receipt_id,student_id;
     private String student_name,student_label;
     private LocalDate date;

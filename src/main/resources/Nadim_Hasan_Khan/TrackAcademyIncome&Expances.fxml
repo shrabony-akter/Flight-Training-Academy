@@ -13,24 +13,22 @@
    <children>
       <DatePicker fx:id="Date" layoutX="112.0" layoutY="89.0" />
       <ComboBox fx:id="Type" layoutX="112.0" layoutY="135.0" prefWidth="150.0" />
-      <ComboBox fx:id="Category" layoutX="112.0" layoutY="177.0" prefWidth="150.0" />
       <TextField fx:id="Amount" layoutX="477.0" layoutY="89.0" />
       <TextField fx:id="Remarks" layoutX="478.0" layoutY="135.0" />
       <Label layoutX="37.0" layoutY="93.0" text="Date" />
       <Label layoutX="37.0" layoutY="139.0" text="Type" />
-      <Label layoutX="37.0" layoutY="181.0" text="Category" />
       <Label layoutX="423.0" layoutY="93.0" text="Amount" />
       <Label layoutX="423.0" layoutY="139.0" text="Remarks" />
       <TableView fx:id="Table" layoutX="112.0" layoutY="301.0" prefHeight="200.0" prefWidth="619.0">
         <columns>
           <TableColumn fx:id="DateCol" prefWidth="135.99996948242188" text="DateCol" />
-          <TableColumn fx:id="TypeCol" prefWidth="106.40003967285156" text="TypeCol" />
-            <TableColumn fx:id="CategoryCol" prefWidth="101.5999755859375" text="CategoryCol" />
-            <TableColumn fx:id="AmountCol" prefWidth="128.79998779296875" text="AmountCol" />
-            <TableColumn fx:id="RemarksCol" prefWidth="146.4000244140625" text="RemarksCol" />
+          <TableColumn fx:id="TypeCol" prefWidth="155.2000274658203" text="TypeCol" />
+            <TableColumn fx:id="AmountCol" prefWidth="154.4000244140625" text="AmountCol" />
+            <TableColumn fx:id="RemarksCol" prefWidth="170.4000244140625" text="RemarksCol" />
         </columns>
       </TableView>
-      <Button layoutX="261.0" layoutY="233.0" mnemonicParsing="false" onAction="#Add_To_Table" prefHeight="26.0" prefWidth="175.0" text="Add_To_Table" />
+      <Button layoutX="357.0" layoutY="233.0" mnemonicParsing="false" onAction="#Add_To_Table" prefHeight="26.0" prefWidth="175.0" text="Add_To_Table" />
       <Button layoutX="552.0" layoutY="234.0" mnemonicParsing="false" onAction="#Go_Back" text="Go_Back" />
+      <Button layoutX="214.0" layoutY="234.0" mnemonicParsing="false" onAction="#MakeReport" text="MakeReport" />
    </children>
 </AnchorPane>

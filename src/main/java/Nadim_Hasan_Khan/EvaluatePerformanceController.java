@@ -57,7 +57,7 @@ public class EvaluatePerformanceController
     @javafx.fxml.FXML
     public void Save_Evaluation(ActionEvent actionEvent) {
         //String name, String course, int id, int score, LocalDate exam_date)
-        EvaluatePerformanceM1 e=new EvaluatePerformanceM1(Name.getText(),
+        EvaluatePerformanceM1 ev=new EvaluatePerformanceM1(Name.getText(),
                 Course.getText(),
                 Integer.parseInt(Id.getText()),
                 Integer.parseInt(Score.getText()),
@@ -75,7 +75,7 @@ public class EvaluatePerformanceController
                 oos=new ObjectOutputStream(fos);
 
             }
-            oos.writeObject(e);
+            oos.writeObject(ev);
             oos.close();
         }
         catch(Exception e){

@@ -42,7 +42,7 @@ public class GeneratePaymentReceiptTwoCont
     @javafx.fxml.FXML
     public void LoadTheTable(ActionEvent actionEvent) {
 
-        File f=new File("GeneratePaymentReceipt2.bin");
+        File f=new File("GeneratePaymentReceipt.bin");
         FileInputStream fis;
         ObjectInputStream ois;
         try{
@@ -51,12 +51,16 @@ public class GeneratePaymentReceiptTwoCont
             while (true){
                 try{
                     GeneratePaymentReceiptM1 st=(GeneratePaymentReceiptM1) ois.readObject();
-                    Table.getItems().add(st);
+                    if (Integer.parseInt(StudentIdFiter.getText())==st.getStudent_id() && StudentLabelFilter.getValue().equals(st.getStudent_label())){
+                        Table.getItems().add(st);
+                    }
+
                 }
                 catch (Exception e){
                     break;
                 }
             }
+            ois.close();
         }
         catch (Exception e){
             e.printStackTrace();
