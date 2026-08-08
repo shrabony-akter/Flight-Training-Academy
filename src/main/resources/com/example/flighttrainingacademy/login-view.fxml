@@ -3,14 +3,17 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="mainpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flighttrainingacademy.LoginViewController">
+<AnchorPane fx:id="mainpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flighttrainingacademy.LoginViewController">
    <children>
-      <ComboBox fx:id="userNameComboBox" layoutX="214.0" layoutY="71.0" prefWidth="150.0" promptText="User Name" />
-      <Button layoutX="258.0" layoutY="187.0" mnemonicParsing="false" onAction="#logInButton" text="Log In" />
-      <PasswordField fx:id="passwordPasswordField" layoutX="209.0" layoutY="123.0" text="Password" />
-      <Text layoutX="141.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <ComboBox fx:id="userTypeComboBox" layoutX="214.0" layoutY="71.0" prefWidth="150.0" promptText="User Type" />
+      <Button layoutX="264.0" layoutY="270.0" mnemonicParsing="false" onAction="#logInButton" text="Log In" />
+      <PasswordField fx:id="passwordPasswordField" layoutX="214.0" layoutY="200.0" />
+      <Text layoutX="141.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Text layoutX="132.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" />
+      <TextField fx:id="userNameTextField" layoutX="215.0" layoutY="130.0" />
    </children>
 </AnchorPane>
