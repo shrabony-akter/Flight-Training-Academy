@@ -7,7 +7,7 @@ module com.example.flighttrainingacademy {
 
     opens com.example.flighttrainingacademy to javafx.fxml;
     exports com.example.flighttrainingacademy;
-    opens Shrabony ;
+    opens Shrabony to javafx.fxml;
     exports Shrabony;
     opens Nadim_Hasan_Khan to javafx.fxml;
     exports Nadim_Hasan_Khan;

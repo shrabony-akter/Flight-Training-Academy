@@ -53,7 +53,10 @@ public class GeneratePaymentReceiptController
     }
 
     @javafx.fxml.FXML
-    public void ShowReceiptOnTable(ActionEvent actionEvent) {
+    public void ShowReceiptOnTable(ActionEvent actionEvent)throws Exception {
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("GeneratePaymentReceipt2.fxml"));
+        Node node=fxmlLoader.load();
+        mainpane.getChildren().setAll(node);
 
 
     }

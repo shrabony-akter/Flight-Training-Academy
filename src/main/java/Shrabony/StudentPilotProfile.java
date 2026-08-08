@@ -1,5 +1,7 @@
 package Shrabony;
 
+import Utility.BinaryFileUtil;
+
 import java.io.Serializable;
 
 public class StudentPilotProfile implements Serializable {
@@ -25,6 +27,19 @@ public class StudentPilotProfile implements Serializable {
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
         this.fullName = fullName;
+    }
+
+    public static void main (String[] args){
+        StudentPilotProfile st1 = new StudentPilotProfile("st1","active","st1@gmail.com","01952593685","Shrabony");
+        StudentPilotProfile st2 = new StudentPilotProfile("st2","inactive","st2@gmail.com","019552393685","Srity");
+        StudentPilotProfile st3 = new StudentPilotProfile("st3","active","st3@gmail.com","01956393685","Arpa");
+        StudentPilotProfile st4 = new StudentPilotProfile("st4","active","st4@gmail.com","01987593685","Riya");
+        StudentPilotProfile st5 = new StudentPilotProfile("st5","inactive","st5@gmail.com","017823693685","Nadim");
+        BinaryFileUtil.appendObject("data/studentPilotProfile.bin",st1);
+        BinaryFileUtil.appendObject("data/studentPilotProfile.bin",st2);
+        BinaryFileUtil.appendObject("data/studentPilotProfile.bin",st3);
+        BinaryFileUtil.appendObject("data/studentPilotProfile.bin",st4);
+        BinaryFileUtil.appendObject("data/studentPilotProfile.bin",st5);
     }
 
     public String getTrainingStatus() {
