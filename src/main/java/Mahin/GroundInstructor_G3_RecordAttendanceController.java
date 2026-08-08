@@ -2,7 +2,17 @@ package Mahin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import Utility.BinaryFileUtil;
+
+import java.io.IOException;
 
 public class GroundInstructor_G3_RecordAttendanceController {
 
@@ -18,7 +28,6 @@ public class GroundInstructor_G3_RecordAttendanceController {
     @FXML
     private ComboBox<String> statusComboBox;
 
-
     @FXML
     public void initialize() {
 
@@ -27,38 +36,55 @@ public class GroundInstructor_G3_RecordAttendanceController {
                 "Absent",
                 "Late"
         );
-
     }
-
 
     @FXML
     public void saveAttendance(ActionEvent event) {
 
         String studentId = studentIdField.getText();
         String studentName = studentNameField.getText();
+
+        String attendanceDate = "";
+
+        if (attendanceDatePicker.getValue() != null) {
+            attendanceDate = attendanceDatePicker.getValue().toString();
+        }
+
         String status = statusComboBox.getValue();
 
-        System.out.println("Attendance Recorded");
-        System.out.println("Student ID: " + studentId);
-        System.out.println("Student Name: " + studentName);
-        System.out.println("Status: " + status);
+        AttendanceRecord attendance = new AttendanceRecord(
+                studentId,
+                studentName,
+                attendanceDate,
+                status
+        );
 
+        BinaryFileUtil.appendObject(
+                "attendance_records.dat",
+                attendance
+        );
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText(null);
         alert.setContentText("Attendance saved successfully!");
         alert.showAndWait();
-
     }
-
 
     @FXML
-    public void goBack(ActionEvent event) {
+    public void goBack(ActionEvent event) throws IOException {
 
-        System.out.println("Returning to Ground Instructor Dashboard");
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("GroundInstructor_Dashboard.fxml")
+        );
 
-        // Scene switching will be added later
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) event.getSource())
+                .getScene()
+                .getWindow();
+
+        stage.setScene(scene);
+        stage.show();
     }
-
 }

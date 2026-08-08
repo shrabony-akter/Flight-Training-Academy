@@ -2,9 +2,19 @@ package Mahin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import Utility.BinaryFileUtil;
+
 import java.io.File;
+import java.io.IOException;
 
 public class GroundInstructor_G2_UploadStudyMaterialsController {
 
@@ -20,9 +30,7 @@ public class GroundInstructor_G2_UploadStudyMaterialsController {
     @FXML
     private Label fileNameLabel;
 
-
     private File selectedFile;
-
 
     @FXML
     public void chooseFile(ActionEvent event) {
@@ -36,31 +44,54 @@ public class GroundInstructor_G2_UploadStudyMaterialsController {
         }
     }
 
-
     @FXML
     public void uploadMaterial(ActionEvent event) {
 
         String title = materialTitleField.getText();
         String subject = subjectField.getText();
+        String description = descriptionArea.getText();
 
-        System.out.println("Study Material Uploaded");
-        System.out.println("Title: " + title);
-        System.out.println("Subject: " + subject);
+        String fileName = "";
+
+        if (selectedFile != null) {
+            fileName = selectedFile.getName();
+        }
+
+        StudyMaterial material = new StudyMaterial(
+                title,
+                subject,
+                description,
+                fileName
+        );
+
+        BinaryFileUtil.appendObject(
+                "study_materials.dat",
+                material
+        );
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText(null);
-        alert.setContentText("Study material uploaded successfully!");
+        alert.setContentText(
+                "Study material uploaded and saved successfully!"
+        );
         alert.showAndWait();
     }
 
-
     @FXML
-    public void goBack(ActionEvent event) {
+    public void goBack(ActionEvent event) throws IOException {
 
-        System.out.println("Returning to Ground Instructor Dashboard");
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("GroundInstructor_Dashboard.fxml")
+        );
 
-        // Scene switching will be added later
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) event.getSource())
+                .getScene()
+                .getWindow();
+
+        stage.setScene(scene);
+        stage.show();
     }
-
 }

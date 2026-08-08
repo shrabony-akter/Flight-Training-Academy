@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="Mahin.GroundInstructor_G4_ConductGroundTheoryAssessmentController">
 
     <children>
@@ -24,22 +29,31 @@
             <Label text="Conduct Ground Theory Assessment"
                    style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
 
-            <TextField fx:id="assessmentTitleField"
-                       promptText="Assessment Title"/>
-
             <TextField fx:id="studentIdField"
                        promptText="Student ID"/>
 
-            <TextField fx:id="marksField"
-                       promptText="Marks Obtained"/>
+            <TextField fx:id="studentNameField"
+                       promptText="Student Name"/>
 
-            <TextArea fx:id="feedbackArea"
-                      promptText="Feedback"
+            <TextField fx:id="assessmentTitleField"
+                       promptText="Assessment Title"/>
+
+            <DatePicker fx:id="assessmentDatePicker"
+                        promptText="Assessment Date"/>
+
+            <TextField fx:id="totalMarksField"
+                       promptText="Total Marks"/>
+
+            <TextField fx:id="obtainedMarksField"
+                       promptText="Obtained Marks"/>
+
+            <TextArea fx:id="remarksArea"
+                      promptText="Remarks"
                       prefHeight="100"/>
 
-            <Button text="Submit Assessment"
-                    fx:id="submitAssessmentButton"
-                    onAction="#submitAssessment"/>
+            <Button text="Save Assessment"
+                    fx:id="saveAssessmentButton"
+                    onAction="#saveAssessment"/>
 
             <Button text="Back"
                     onAction="#goBack"/>

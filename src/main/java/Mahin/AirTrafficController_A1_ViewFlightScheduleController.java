@@ -1,33 +1,87 @@
-package Mahin;
+        package Mahin;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import Utility.BinaryFileUtil;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class AirTrafficController_A1_ViewFlightScheduleController {
 
+    @FXML
+    private TableView<Flight> flightTable;
 
     @FXML
-    private TableView<?> flightTable;
+    private TableColumn<Flight, String> flightIdColumn;
 
     @FXML
-    private TableColumn<?, ?> flightIdColumn;
+    private TableColumn<Flight, String> timeColumn;
 
     @FXML
-    private TableColumn<?, ?> timeColumn;
+    private TableColumn<Flight, String> destinationColumn;
 
     @FXML
-    private TableColumn<?, ?> destinationColumn;
+    private TableColumn<Flight, String> statusColumn;
 
     @FXML
-    private TableColumn<?, ?> statusColumn;
+    public void initialize() {
 
+        flightIdColumn.setCellValueFactory(
+                new PropertyValueFactory<>("flightId")
+        );
 
-    @FXML
-    public void goBack(ActionEvent event) {
+        timeColumn.setCellValueFactory(
+                new PropertyValueFactory<>("flightTime")
+        );
 
-        System.out.println("Back to ATC Dashboard");
+        destinationColumn.setCellValueFactory(
+                new PropertyValueFactory<>("destination")
+        );
 
+        statusColumn.setCellValueFactory(
+                new PropertyValueFactory<>("status")
+        );
+
+        Flight.initializeSampleFlights();
+
+        loadFlights();
     }
 
+    private void loadFlights() {
+
+        ArrayList<Flight> flights =
+                BinaryFileUtil.readObjects("flights.dat");
+
+        ObservableList<Flight> flightList =
+                FXCollections.observableArrayList(flights);
+
+        flightTable.setItems(flightList);
+    }
+
+    @FXML
+    public void goBack(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("AirTrafficController_Dashboard.fxml")
+        );
+
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) event.getSource())
+                .getScene()
+                .getWindow();
+
+        stage.setScene(scene);
+        stage.show();
+    }
 }
