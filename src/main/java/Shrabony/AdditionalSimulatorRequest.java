@@ -4,20 +4,42 @@ import java.io.Serializable;
 
 public class AdditionalSimulatorRequest implements Serializable {
 
+    private String requestId;
+    private String studentId;
     private String preferredDate;
     private String preferredTimeSlot;
     private String reason;
     private String requestStatus;
 
-    public AdditionalSimulatorRequest(String preferredDate,
+    public AdditionalSimulatorRequest(String requestId,
+                                      String studentId,
+                                      String preferredDate,
                                       String preferredTimeSlot,
                                       String reason,
                                       String requestStatus) {
 
+        this.requestId = requestId;
+        this.studentId = studentId;
         this.preferredDate = preferredDate;
         this.preferredTimeSlot = preferredTimeSlot;
         this.reason = reason;
         this.requestStatus = requestStatus;
+    }
+
+    public String getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public String getPreferredDate() {

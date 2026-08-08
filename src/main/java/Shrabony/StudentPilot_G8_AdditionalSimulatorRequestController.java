@@ -30,58 +30,113 @@ public class StudentPilot_G8_AdditionalSimulatorRequestController {
     @FXML
     public void submitRequestButton(ActionEvent actionEvent) {
 
-        LocalDate preferredDate = preferredDateDatePicker.getValue();
-        String preferredTimeSlot = preferredTimeSlotTextField.getText().trim();
-        String reason = reasonTextField.getText().trim();
+        LocalDate preferredDate =
+                preferredDateDatePicker.getValue();
 
-        if (preferredDate == null ||
-                preferredTimeSlot.isEmpty() ||
-                reason.isEmpty()) {
+        String preferredTimeSlot =
+                preferredTimeSlotTextField.getText().trim();
 
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setContentText("Please fill in all fields.");
-            alert.showAndWait();
+        String reason =
+                reasonTextField.getText().trim();
+
+        // Validate fields
+        if (preferredDate == null
+                || preferredTimeSlot.isEmpty()
+                || reason.isEmpty()) {
+
+            showAlert(
+                    Alert.AlertType.ERROR,
+                    "Please fill in all fields."
+            );
+
             return;
         }
 
+        // Get current student
+        String studentId = getStudentId();
+
+        if (studentId == null) {
+
+            showAlert(
+                    Alert.AlertType.ERROR,
+                    "Student profile could not be found."
+            );
+
+            return;
+        }
+
+        // Check booked simulator sessions
         ArrayList<BookedSimulatorTraining> bookedSessions =
-                BinaryFileUtil.readObjects("data/bookedSimulatorTrainings.bin");
+                BinaryFileUtil.readObjects(
+                        "data/bookedSimulatorTrainings.bin"
+                );
 
         for (BookedSimulatorTraining booking : bookedSessions) {
 
-            if (booking.getSessionDate().equals(preferredDate.toString())
-                    && booking.getTimeSlot().equalsIgnoreCase(preferredTimeSlot)) {
+            if (booking.getSessionDate().equals(
+                    preferredDate.toString())
+                    && booking.getTimeSlot().equalsIgnoreCase(
+                    preferredTimeSlot)) {
 
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setHeaderText(null);
-                alert.setContentText("The selected time slot is not available.");
-                alert.showAndWait();
+                showAlert(
+                        Alert.AlertType.ERROR,
+                        "The selected time slot is not available."
+                );
+
                 return;
             }
         }
 
+        // Create request ID
+        String requestId =
+                "REQ" + System.currentTimeMillis();
+
+        // Create request
         AdditionalSimulatorRequest request =
                 new AdditionalSimulatorRequest(
+                        requestId,
+                        studentId,
                         preferredDate.toString(),
                         preferredTimeSlot,
                         reason,
                         "Pending"
                 );
 
+        // Save request
         BinaryFileUtil.appendObject(
                 "data/additionalSimulatorRequests.bin",
                 request
         );
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText(null);
-        alert.setContentText("Simulator request submitted successfully.");
-        alert.showAndWait();
+        showAlert(
+                Alert.AlertType.INFORMATION,
+                "Simulator request submitted successfully."
+        );
 
+        // Clear form
         preferredDateDatePicker.setValue(null);
         preferredTimeSlotTextField.clear();
         reasonTextField.clear();
+    }
+
+    /**
+     * Gets the student ID from the stored student profile.
+     *
+     * This assumes the profile file contains the current
+     * student's profile.
+     */
+    private String getStudentId() {
+
+        ArrayList<StudentPilotProfile> students =
+                BinaryFileUtil.readObjects(
+                        "data/studentPilotProfile.bin"
+                );
+
+        if (students.isEmpty()) {
+            return null;
+        }
+
+        return students.get(0).getStudentId();
     }
 
     @FXML
@@ -92,5 +147,17 @@ public class StudentPilot_G8_AdditionalSimulatorRequestController {
                 "/Shrabony/StudentPilotDashboard.fxml",
                 "Student Pilot Dashboard"
         );
+    }
+
+    private void showAlert(
+            Alert.AlertType type,
+            String message) {
+
+        Alert alert = new Alert(type);
+
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+
+        alert.showAndWait();
     }
 }

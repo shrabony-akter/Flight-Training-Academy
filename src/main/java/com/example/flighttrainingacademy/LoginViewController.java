@@ -19,7 +19,7 @@ public class LoginViewController
     @javafx.fxml.FXML
     private AnchorPane mainpane;
     @javafx.fxml.FXML
-    private TextField userNameTextField;
+    private TextField  userNameTextField;
     @javafx.fxml.FXML
     private ComboBox <String> userTypeComboBox;
 
@@ -31,7 +31,7 @@ public class LoginViewController
 
     @javafx.fxml.FXML
     public void logInButton(ActionEvent actionEvent) throws IOException {
-        if (userTypeComboBox.getValue().equals("Flight Instructor")) {
+        if (userTypeComboBox.getValue().equals("Flight Instructor") && userNameTextField.getText().equals("Masuda") && passwordPasswordField.getText().equals("Masuda1234")) {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Shrabony/FlightInstructor_Dashboard.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
@@ -40,7 +40,7 @@ public class LoginViewController
             nextStage.show();
         }
 
-        else if (userTypeComboBox.getValue().equals("Student Pilot")) {
+        else if (userTypeComboBox.getValue().equals("Student Pilot") && userNameTextField.getText().equals("Shrabony") && passwordPasswordField.getText().equals("Shrabony1234")) {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Shrabony/StudentPilot_Dashboard.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
